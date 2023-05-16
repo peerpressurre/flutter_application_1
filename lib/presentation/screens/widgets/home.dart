@@ -5,6 +5,18 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text(text, textDirection: TextDirection.ltr ),);
+    return const Center(child: Text(
+      text,
+       textDirection: TextDirection.ltr,
+        style: TextStyle(
+          color: Colors.black54,
+           fontSize: 25,
+           height: 2,
+           decorationThickness: 1.5,
+           decorationStyle: TextDecorationStyle.wavy,
+           fontStyle: FontStyle.italic
+           )),
+);
   }
 }
+
