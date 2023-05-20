@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/presentation/screens/widgets/widgets.dart';
 const String text1 = "Ім'я: Бетті\nПо-матері: Софіївна\nВік: 4\nДіти: 4\nГладибельність: 10/10\nПроводить більше часу: На вулиці"; 
 const String text2 = "Ім'я: Елла\nПо-матері: Софіївна\nВік: 2.5\nДіти: -\nГладибельність: 10/10\nПроводить більше часу: Дома";
 class Home extends StatelessWidget {
@@ -46,3 +45,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+
