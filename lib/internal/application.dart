@@ -32,8 +32,8 @@ class Application extends StatelessWidget {
         ),
         backgroundColor: Colors.purple[100],
           body: Column(
-          children: <Widget>[
-            Stack(
+          children: [Padding(padding: EdgeInsets.fromLTRB(50, 50, 50, 25),
+            child: Stack(
               children: [
                   Align(
               alignment: Alignment.topLeft,
@@ -57,12 +57,14 @@ class Application extends StatelessWidget {
                 ),
               ),
             ),
-              ]),
-                 const Home(),
-          ],
+              ]),    
+          ),
+           const Home() 
+
+          ])
+          
+         
         ),
-        ),
-       
-);
+        );
   }
 }
