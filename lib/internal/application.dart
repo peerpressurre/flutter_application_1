@@ -1,4 +1,3 @@
-//import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/presentation/screens/widgets/home.dart';
 
@@ -20,8 +19,6 @@ class Application extends StatelessWidget {
     ),
   ),
       home: Scaffold(
-        //body: Image.asset('assets/images/celebratingcat.png'),
-        // body: Home(),
         appBar: AppBar(
           title: const Text('Account'),
           leading: const Icon(Icons.animation_outlined),
@@ -34,20 +31,34 @@ class Application extends StatelessWidget {
           backgroundColor: Colors.purple[200],
         ),
         backgroundColor: Colors.purple[100],
-         body: Column(
-          children: [
-            Align(
+          body: Column(
+          children: <Widget>[
+            Stack(
+              children: [
+                  Align(
               alignment: Alignment.topLeft,
               child: SizedBox(
-                // width: 200, // Set the desired width
-                height: 200, // Set the desired height
+                // width: 200, 
+                height: 150, 
                 child: Image.network(
-                  'https://www.linkpicture.com/q/betty.jpeg',
+                  'https://www.linkpicture.com/q/bettycropped.jpeg',
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            const Home(),
+             Align(
+              alignment: Alignment.topCenter,
+              child: SizedBox(
+                // width: 200, // Set the desired width
+                height: 150, // Set the desired height
+                child: Image.network(
+                  'https://www.linkpicture.com/q/ella2.jpeg',
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+              ]),
+                 const Home(),
           ],
         ),
         ),
