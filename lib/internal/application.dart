@@ -1,54 +1,57 @@
+//import 'dart:convert';
 import 'package:flutter/material.dart';
-// import 'package:flutter_application_1/presentation/screens/widgets/home.dart';
+import 'package:flutter_application_1/presentation/screens/widgets/home.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Personal info',
+      debugShowCheckedModeBanner: false,
+      title: 'Personal Info',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: ImageWithTextOverlay(),    );
-  }
-}
-
-class ImageWithTextOverlay extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Personal info'),
-      ),
-      body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              'assets/images/celebratingcat.png',
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
+    brightness: Brightness.light,
+    primaryColor: Colors.purple[100],
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(fontSize: 70.0, fontWeight: FontWeight.bold),
+      titleLarge: TextStyle(fontSize: 25.0, fontStyle: FontStyle.normal),
+      bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+    ),
+  ),
+      home: Scaffold(
+        //body: Image.asset('assets/images/celebratingcat.png'),
+        // body: Home(),
+        appBar: AppBar(
+          title: const Text('Account'),
+          leading: const Icon(Icons.animation_outlined),
+                    actions: [
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () {},
             ),
-            Positioned(
-              bottom: 16.0,
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                color: Colors.black.withOpacity(0.5),
-                child: Text(
-                  "Name: Sofia\nSurname: Kotsaga\nAge: 16",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+          ],
+          backgroundColor: Colors.purple[200],
+        ),
+        backgroundColor: Colors.purple[100],
+         body: Column(
+          children: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: SizedBox(
+                // width: 200, // Set the desired width
+                height: 200, // Set the desired height
+                child: Image.network(
+                  'https://www.linkpicture.com/q/betty.jpeg',
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
+            const Home(),
           ],
         ),
-      ),
-    );
+        ),
+       
+);
   }
 }
