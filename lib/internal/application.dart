@@ -1,60 +1,34 @@
 import 'package:flutter/material.dart';
-const String text1 = "Ім'я: Бетті\nПо-матері: Софіївна\nВік: 4\nДіти: 4\nГладибельність: 10/10\nПроводить більше часу: На вулиці"; 
-const String text2 = "Ім'я: Елла\nПо-матері: Софіївна\nВік: 2.5\nДіти: -\nГладибельність: 10/10\nПроводить більше часу: Дома";
-class Home extends StatelessWidget {
-  const Home ({super.key});
+import 'package:flutter_application_1/presentation/screens/screen1.dart';
+import 'package:flutter_application_1/presentation/screens/screen2.dart';
+import 'package:flutter_application_1/presentation/screens/widgets/home.dart';
+
+class Application extends StatelessWidget {
+  const Application({super.key});
 
   @override
-   Widget build(BuildContext context) {
-    return 
-    Scaffold(
-        appBar: AppBar(
-          title: const Text('Account'),
-          leading: const Icon(Icons.animation_outlined),
-                    actions: [
-            IconButton(
-              icon: const Icon(Icons.logout),
-              onPressed: () {},
-            ),
-          ],
-          backgroundColor: Colors.purple[200],
-        ),
-        backgroundColor: Colors.purple[100],
-          body: Center(
-            child:
-                    Stack(
-                      children:[
-                         Padding(padding: EdgeInsets.fromLTRB(50, 310, 50, 25),
-                      child: 
-                     Align(
-                           alignment: Alignment.topCenter,
-                           child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                fixedSize: Size(100, 50),
-                                 backgroundColor: Colors.purple, // background (button) color
-                                 foregroundColor: Colors.white, // foreground (text) color
-                              ),
-                            onPressed:(){Navigator.pushNamed(context, '/screen1');},
-                            child: const Text("Cat 1"),),
-                      )),
-                      Padding(padding: EdgeInsets.fromLTRB(50, 15, 50, 95),
-                      child: 
-                      Align(
-                            alignment: Alignment.center,
-                            child: 
-                            ElevatedButton( 
-                              style: ElevatedButton.styleFrom(
-                                fixedSize: Size(100, 50),
-                                 backgroundColor: Colors.purple, // background (button) color
-                                 foregroundColor: Colors.white, // foreground (text) color
-                              ),
-                              onPressed:(){Navigator.pushNamed(context, '/screen2');},
-                       child: const Text("Cat 2"),)
-                      )
-                    )]
-                     ),
-                    
-                  )                    
-                  );      
-   }
+  Widget build(BuildContext context) {
+    return MaterialApp(
+       initialRoute: '/',
+  routes: {
+    // When navigating to the "/" route, build the FirstScreen widget.
+    '/': (context) => const Home(),
+    // When navigating to the "/second" route, build the SecondScreen widget.
+    '/screen1': (context) => const Screen1(),
+    '/screen2': (context) => const Screen2(),
+  },
+      debugShowCheckedModeBanner: false,
+      title: 'Personal Info',
+      theme: ThemeData(
+    brightness: Brightness.light,
+    primaryColor: Colors.purple[100],
+    textTheme: const TextTheme(
+      displayLarge: TextStyle(fontSize: 70.0, fontWeight: FontWeight.bold),
+      titleLarge: TextStyle(fontSize: 25.0, fontStyle: FontStyle.normal),
+      bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+    ),
+  ),
+     
+        );
+  }
 }
