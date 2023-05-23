@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
             child:
                     Stack(
                       children:[
-                         Padding(padding: EdgeInsets.fromLTRB(50, 370, 50, 25),
+                         Padding(padding: EdgeInsets.fromLTRB(50, 310, 50, 25),
                       child: 
                      Align(
                            alignment: Alignment.topCenter,
@@ -34,10 +34,10 @@ class Home extends StatelessWidget {
                                  backgroundColor: Colors.purple, // background (button) color
                                  foregroundColor: Colors.white, // foreground (text) color
                               ),
-                            onPressed:(){Navigator.pushNamed(context, '/screen2');},
-                            child: const Text("Cat 2"),),
+                            onPressed:(){Navigator.pushNamed(context, '/screen1');},
+                            child: const Text("Cat 1"),),
                       )),
-                      Padding(padding: EdgeInsets.fromLTRB(50, 15, 50, 25),
+                      Padding(padding: EdgeInsets.fromLTRB(50, 15, 50, 95),
                       child: 
                       Align(
                             alignment: Alignment.center,
@@ -48,8 +48,8 @@ class Home extends StatelessWidget {
                                  backgroundColor: Colors.purple, // background (button) color
                                  foregroundColor: Colors.white, // foreground (text) color
                               ),
-                              onPressed:(){Navigator.pushNamed(context, '/screen1');},
-                       child: const Text("Cat 1"),)
+                              onPressed:(){Navigator.pushNamed(context, '/screen2');},
+                       child: const Text("Cat 2"),)
                       )
                     )]
                      ),
