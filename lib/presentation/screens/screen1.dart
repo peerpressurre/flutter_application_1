@@ -40,7 +40,8 @@ class Screen1 extends StatelessWidget {
                )
                     ),] 
                              )
-            )],
+            ),
+            
              Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -55,7 +56,8 @@ class Screen1 extends StatelessWidget {
                 ),
                 ),
             ),       
-      ]),
+      ],
+      ),
         ),
       );   
   }
