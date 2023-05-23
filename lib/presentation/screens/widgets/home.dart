@@ -6,43 +6,55 @@ class Home extends StatelessWidget {
 
   @override
    Widget build(BuildContext context) {
-    return Align(
-      child: Column(children: <Widget>[
-       Stack(
-          children: const [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                text1,
-                style: TextStyle(
-                  color: Colors.black87,
-               fontSize: 13,
-               height: 2,
-               decorationThickness: 5,
-               decorationStyle: TextDecorationStyle.wavy,
-               fontStyle: FontStyle.normal
-                ),
-                ),
+    return 
+    Scaffold(
+        appBar: AppBar(
+          title: const Text('Account'),
+          leading: const Icon(Icons.animation_outlined),
+                    actions: [
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () {},
             ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                text2,
-                 style: TextStyle(
-                  color: Colors.black87,
-               fontSize: 13,
-               height: 2,
-               decorationThickness: 5,
-               decorationStyle: TextDecorationStyle.wavy,
-               fontStyle: FontStyle.normal
-                ),
-                ),
-            )
           ],
-        )
-      ]
-      ,)
-    );
-  }
+          backgroundColor: Colors.purple[200],
+        ),
+        backgroundColor: Colors.purple[100],
+          body: Center(
+            child:
+                    Stack(
+                      children:[
+                         Padding(padding: EdgeInsets.fromLTRB(50, 370, 50, 25),
+                      child: 
+                     Align(
+                           alignment: Alignment.topCenter,
+                           child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                fixedSize: Size(100, 50),
+                                 backgroundColor: Colors.purple, // background (button) color
+                                 foregroundColor: Colors.white, // foreground (text) color
+                              ),
+                            onPressed:(){Navigator.pushNamed(context, '/screen2');},
+                            child: const Text("Cat 2"),),
+                      )),
+                      Padding(padding: EdgeInsets.fromLTRB(50, 15, 50, 25),
+                      child: 
+                      Align(
+                            alignment: Alignment.center,
+                            child: 
+                            ElevatedButton( 
+                              style: ElevatedButton.styleFrom(
+                                fixedSize: Size(100, 50),
+                                 backgroundColor: Colors.purple, // background (button) color
+                                 foregroundColor: Colors.white, // foreground (text) color
+                              ),
+                              onPressed:(){Navigator.pushNamed(context, '/screen1');},
+                       child: const Text("Cat 1"),)
+                      )
+                    )]
+                     ),
+                    
+                  )                    
+                  );      
+   }
 }
-
