@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/presentation/screens/Screen1.dart';
+import 'package:flutter_application_1/presentation/screens/screen2.dart';
 import 'package:flutter_application_1/presentation/screens/widgets/home.dart';
 
 class Application extends StatelessWidget {
@@ -7,6 +9,14 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       initialRoute: '/',
+  routes: {
+    // When navigating to the "/" route, build the FirstScreen widget.
+    '/': (context) => const Home(),
+    // When navigating to the "/second" route, build the SecondScreen widget.
+    '/screen1': (context) => const Screen1(),
+    '/screen2': (context) => const Screen2(),
+  },
       debugShowCheckedModeBanner: false,
       title: 'Personal Info',
       theme: ThemeData(
@@ -18,53 +28,7 @@ class Application extends StatelessWidget {
       bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
     ),
   ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Account'),
-          leading: const Icon(Icons.animation_outlined),
-                    actions: [
-            IconButton(
-              icon: const Icon(Icons.logout),
-              onPressed: () {},
-            ),
-          ],
-          backgroundColor: Colors.purple[200],
-        ),
-        backgroundColor: Colors.purple[100],
-          body: Column(
-          children: [Padding(padding: EdgeInsets.fromLTRB(50, 50, 50, 25),
-            child: Stack(
-              children: [
-                  Align(
-              alignment: Alignment.topLeft,
-              child: SizedBox(
-                // width: 200, 
-                height: 150, 
-                child: Image.network(
-                  'https://www.linkpicture.com/q/bettycropped.jpeg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-             Align(
-              alignment: Alignment.topCenter,
-              child: SizedBox(
-                // width: 200, // Set the desired width
-                height: 150, // Set the desired height
-                child: Image.network(
-                  'https://www.linkpicture.com/q/ella2.jpeg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-              ]),    
-          ),
-           const Home() 
-
-          ])
-          
-         
-        ),
+     
         );
   }
 }
