@@ -6,34 +6,41 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Colors.purple[50],
       appBar: AppBar(
+        backgroundColor: Colors.purple[200],
         title: const Text('Betty'),
       ),
       body: Center(
         child: 
-
-
-        // child: ElevatedButton(
-        //   // Within the `FirstScreen` widget
-        //   onPressed: () {
-        //     // Navigate to the second screen using a named route.
-        //     Navigator.pushNamed(context, '/screen1');
-        //   },
-
-
           Stack(
-            children:[            
-               Align(
-              alignment: Alignment.topLeft,
-              child: SizedBox(
-                // width: 200, 
-                height: 150, 
-                child: Image.network(
-                  'https://www.linkpicture.com/q/bettycropped.jpeg',
-                  fit: BoxFit.cover,
-                ),
+            children:[ Padding(padding: EdgeInsets.fromLTRB(750, 250, 200, 25),
+            child:
+             Stack(
+              children:[ Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                        color: Colors.purple[200],
+                        boxShadow: [
+                 BoxShadow(
+                   color: Colors.grey.withOpacity(0.5),
+                   spreadRadius: 5,
+                   blurRadius: 7,
+                   offset: Offset(0, 3), 
+                 ),
+               ],
+                borderRadius: BorderRadius.circular(700),
               ),
-            ),
+               child: ClipOval(
+                 child: Image.network(
+                   'https://www.linkpicture.com/q/bettycropped.jpeg', 
+                   fit: BoxFit.cover,
+                 ),
+               )
+                    ),] 
+                             )
+            )],
              Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -47,11 +54,22 @@ class Screen1 extends StatelessWidget {
                fontStyle: FontStyle.normal
                 ),
                 ),
-            ),
-
-            ]
-          ),
+            ),       
+      ]),
         ),
       );   
   }
 }
+
+
+ //   Align(
+            //   alignment: Alignment.topLeft,
+            //   child: SizedBox(
+            //     // width: 200, 
+            //     height: 150, 
+            //     child: Image.network(
+            //       'https://www.linkpicture.com/q/bettycropped.jpeg',
+            //       fit: BoxFit.cover,
+            //     ),
+            //   ),
+            // ),
