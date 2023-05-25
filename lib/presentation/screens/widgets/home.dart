@@ -1,6 +1,5 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-const String text1 = "Ім'я: Бетті\nПо-матері: Софіївна\nВік: 4\nДіти: 4\nГладибельність: 10/10\nПроводить більше часу: На вулиці"; 
-const String text2 = "Ім'я: Елла\nПо-матері: Софіївна\nВік: 2.5\nДіти: -\nГладибельність: 10/10\nПроводить більше часу: Дома";
 class Home extends StatelessWidget {
   const Home ({super.key});
 
@@ -14,7 +13,7 @@ class Home extends StatelessWidget {
                     actions: [
             IconButton(
               icon: const Icon(Icons.logout),
-              onPressed: () {},
+              onPressed: (){exit(0);},
             ),
           ],
           backgroundColor: Colors.purple[200],
@@ -23,12 +22,13 @@ class Home extends StatelessWidget {
           body: Center(
             child:
                     Stack(
-                      children:[
-                         Padding(padding: EdgeInsets.fromLTRB(50, 310, 50, 25),
-                      child: 
+                      children:[                
                      Align(
-                           alignment: Alignment.topCenter,
-                           child: ElevatedButton(
+                       alignment: FractionalOffset(0.5, 0.4),
+                           child: 
+                             Padding(padding: EdgeInsets.fromLTRB(50, 50, 50, 25),
+                           child: 
+                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 fixedSize: Size(100, 50),
                                  backgroundColor: Colors.purple, // background (button) color
@@ -36,12 +36,13 @@ class Home extends StatelessWidget {
                               ),
                             onPressed:(){Navigator.pushNamed(context, '/screen1');},
                             child: const Text("Cat 1"),),
-                      )),
-                      Padding(padding: EdgeInsets.fromLTRB(50, 15, 50, 95),
-                      child: 
+                      )
+                      ),
                       Align(
-                            alignment: Alignment.center,
-                            child: 
+                          alignment: FractionalOffset(0.5, 0.4),        
+                          child: 
+                            Padding(padding: EdgeInsets.fromLTRB(50, 150, 50, 25),
+                           child: 
                             ElevatedButton( 
                               style: ElevatedButton.styleFrom(
                                 fixedSize: Size(100, 50),
@@ -51,10 +52,9 @@ class Home extends StatelessWidget {
                               onPressed:(){Navigator.pushNamed(context, '/screen2');},
                        child: const Text("Cat 2"),)
                       )
-                    )]
-                     ),
-                    
-                  )                    
-                  );      
+                    )
+                    ])
+                     ),                   
+                  );                                      
    }
 }
