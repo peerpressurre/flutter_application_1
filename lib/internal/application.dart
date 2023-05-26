@@ -16,7 +16,6 @@ class Application extends StatelessWidget {
     // When navigating to the "/second" route, build the SecondScreen widget.
     '/screen1': (context) => const Screen1(),
     '/screen2': (context) => const Screen2(),
-    // '/exit': (context) => const Screen1(),
   },
       debugShowCheckedModeBanner: false,
       title: 'Personal Info',
