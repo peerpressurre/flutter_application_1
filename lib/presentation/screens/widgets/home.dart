@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/presentation/screens/widgets/test.dart';
 class Home extends StatelessWidget {
   const Home ({super.key});
 
@@ -49,7 +50,13 @@ class Home extends StatelessWidget {
                                  backgroundColor: Colors.purple, // background (button) color
                                  foregroundColor: Colors.white, // foreground (text) color
                               ),
-                              onPressed:(){Navigator.pushNamed(context, '/screen2');},
+                              onPressed:(){
+                                 Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  MyClickableImage()),
+                  );
+                                // Navigator.pushNamed(context, '/screen2');
+                                },
                        child: const Text("Cat 2"),)
                       )
                     )
