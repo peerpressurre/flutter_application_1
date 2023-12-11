@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/presentation/screens/screen2.dart';
 import 'package:flutter_application_1/presentation/screens/widgets/test.dart';
 class Home extends StatelessWidget {
   const Home ({super.key});
@@ -53,7 +54,7 @@ class Home extends StatelessWidget {
                               onPressed:(){
                                  Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  MyClickableImage()),
+                    MaterialPageRoute(builder: (context) =>  Screen2()),
                   );
                                 // Navigator.pushNamed(context, '/screen2');
                                 },

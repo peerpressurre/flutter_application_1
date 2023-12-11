@@ -26,21 +26,11 @@ class _MyClickableImageState extends State<MyClickableImage> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        // Toggle the opacity on tap
-        setState(() {
-          _opacity = _opacity == 1.0 ? 0.5 : 1.0;
-        });
-      },
-      child: Opacity(
-        opacity: _opacity,
-        child: Image.asset(
-          'assets/your_image.png', // Replace with the path to your PNG image
-          width: 200, // Adjust the width as needed
-          height: 200, // Adjust the height as needed
-        ),
-      ),
-    );
+    return Column(children: [
+      Container(
+        height: 200,
+        width: 200,
+      )
+    ],);
   }
 }

@@ -35,10 +35,11 @@ class Screen1 extends StatelessWidget {
                borderRadius: BorderRadius.circular(500),
              ),
               child: ClipOval(
-                child: Image.network(
-                 'https://www.linkpicture.com/q/bettycropped.jpeg', 
-                 fit: BoxFit.cover,
-                ),
+                child: Image.asset(
+          'assets/your_image.png', // Replace with the path to your PNG image
+          // width: 200, // Adjust the width as needed
+          // height: 200, // Adjust the height as needed
+        ),
               )
           )
                 )                 
