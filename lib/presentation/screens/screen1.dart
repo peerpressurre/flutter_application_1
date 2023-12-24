@@ -68,3 +68,131 @@ class Screen1 extends StatelessWidget {
           );
   }
 }
+
+
+//  Expanded(
+//                 child: ListView(
+//                 children: [ 
+//                   SizedBox(height: 100),
+//                   Container(
+//                     alignment: Alignment.center,
+//                           height: 35,
+//                           width: 35,
+//                           decoration: const BoxDecoration(
+//                               image: DecorationImage(
+//                                   image:
+//                                       AssetImage('assets/icons/insta_icon.png'),
+//                                   fit: BoxFit.fill,
+//                                   opacity: 0.7
+//                                   )
+//                               ),
+//                               // child: Image.asset('assets/headline/headline_back.jpg'),
+//                         ),
+//                         SizedBox(height: 18,),
+//                         Text('Instagram',
+//                         style: TextStyle(
+//                           color: Colors.black,
+//                           fontWeight: FontWeight.w600,
+//                           fontSize: 14,
+//                           // letterSpacing: 0.5
+//                         )),
+//                          SizedBox(height: 18,),
+//                         Text('@zoria_2_vn_ua',
+//                         style: TextStyle(
+//                           color: Colors.black45,
+//                           fontWeight: FontWeight.w500,
+//                           fontSize: 13,
+//                           letterSpacing: 0.1
+//                         )),
+//                         SizedBox(height: 100),
+//                  Container(
+//                          height: 35,
+//                          width: 35,
+//                          decoration: const BoxDecoration(
+//                              image: DecorationImage(
+//                                  image:
+//                                      AssetImage('assets/icons/insta_icon.png'),
+//                                  fit: BoxFit.fill,
+//                                  opacity: 0.7
+//                                  )
+//                              ),
+//                              // child: Image.asset('assets/headline/headline_back.jpg'),
+//                        ),
+//                        SizedBox(height: 18,),
+//                        Text('Facebook',
+//                        style: TextStyle(
+//                          color: Colors.black,
+//                          fontWeight: FontWeight.w600,
+//                          fontSize: 14,
+//                          // letterSpacing: 0.5
+//                        )),
+//                         SizedBox(height: 18,),
+//                        Text('zoria.2.vn.ua',
+//                        style: TextStyle(
+//                          color: Colors.black45,
+//                          fontWeight: FontWeight.w500,
+//                          fontSize: 13,
+//                          letterSpacing: 0.1
+//                        )),
+//                        SizedBox(height: 100),
+//                 Container(
+//                         height: 35,
+//                         width: 35,
+//                         decoration: const BoxDecoration(
+//                             image: DecorationImage(
+//                                 image:
+//                                     AssetImage('assets/icons/insta_icon.png'),
+//                                 fit: BoxFit.fill,
+//                                 opacity: 0.7
+//                                 )
+//                             ),
+//                             // child: Image.asset('assets/headline/headline_back.jpg'),
+//                       ),
+//                       SizedBox(height: 18,),
+//                       Text('Email',
+//                       style: TextStyle(
+//                         color: Colors.black,
+//                         fontWeight: FontWeight.w600,
+//                         fontSize: 14,
+//                         // letterSpacing: 0.5
+//                       )),
+//                        SizedBox(height: 18,),
+//                       Text('osobnyakcentr@gmail.com',
+//                       style: TextStyle(
+//                         color: Colors.black45,
+//                         fontWeight: FontWeight.w500,
+//                         fontSize: 13,
+//                         letterSpacing: 0.1
+//                       )),
+//                        SizedBox(height: 100),
+//                 Container(
+//                         height: 35,
+//                         width: 35,
+//                         decoration: const BoxDecoration(
+//                             image: DecorationImage(
+//                                 image:
+//                                     AssetImage('assets/icons/insta_icon.png'),
+//                                 fit: BoxFit.fill,
+//                                 opacity: 0.7
+//                                 )
+//                             ),
+//                             // child: Image.asset('assets/headline/headline_back.jpg'),
+//                       ),
+//                       SizedBox(height: 18,),
+//                       Text('Телефон',
+//                       style: TextStyle(
+//                         color: Colors.black,
+//                         fontWeight: FontWeight.w600,
+//                         fontSize: 14,
+//                         // letterSpacing: 0.5
+//                       )),
+//                        SizedBox(height: 18,),
+//                       Text('+38 067 530 6927',
+//                       style: TextStyle(
+//                         color: Colors.black45,
+//                         fontWeight: FontWeight.w500,
+//                         fontSize: 13,
+//                         letterSpacing: 0.1
+//                       )),],
+//                             ),
+//               ),
